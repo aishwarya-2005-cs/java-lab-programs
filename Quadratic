@@ -1,0 +1,39 @@
+import java.lang.Math;
+import java.util.Scanner;
+class Quadratic{
+public static void main(String args[])
+{
+ double r1,r2, d;
+ Scanner sc=new Scanner(System.in);
+System.out.println("enter coefficient of a");
+int a=sc.nextInt();
+System.out.println("enter coefficient of b");
+int b=sc.nextInt();
+System.out.println("enter coefficient of c");
+int c=sc.nextInt();
+if(a==0.0){
+System.out.println("not a quadratic equation");
+}
+else{
+d=b*b-4*a*c;
+ if(d==0.0){
+r1=(-d)/(2*a);
+System.out.println("Roots are real and equal");
+}
+else if(d>0.0)
+{
+r1=((-b)+(Math.sqrt(d)))/(double)(2*a);
+r2=((-b)-(Math.sqrt(d)))/(double)(2*a);
+System.out.println("Roots are real and distinct");
+}
+else if(d<0.0)
+{
+r1=(-b)/(2*a);
+r2=Math.sqrt(-d)/(2*a);
+System.out.println("Roots are imaginary");
+}
+}
+}
+}
+
+
